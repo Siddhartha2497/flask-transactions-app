@@ -1,0 +1,130 @@
+[
+  {
+    "tid": "ae0cf40d-497f-40e7-b042-5c9b1778d9f5",
+    "date": "2025-06-01",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "2118.74",
+    "note": "Fuel"
+  },
+  {
+    "tid": "8cffd6ce-0559-44b6-b0f5-094b66390582",
+    "date": "2025-06-01",
+    "transaction_type": "expense",
+    "transaction_category": "Transport",
+    "amount": "12",
+    "note": "Auto"
+  },
+  {
+    "tid": "b48db470-900d-4069-9777-f3beadbe43dd",
+    "date": "2025-06-01",
+    "transaction_type": "expense",
+    "transaction_category": "Household",
+    "amount": "10",
+    "note": "Tyre Air"
+  },
+  {
+    "tid": "2054c753-b7e5-44a3-9369-328bec9524a6",
+    "date": "2025-06-01",
+    "transaction_type": "expense",
+    "transaction_category": "Gift",
+    "amount": "530",
+    "note": "Blinkit"
+  },
+  {
+    "tid": "bc822e50-34bd-41a2-992f-54ac528e1005",
+    "date": "2025-06-02",
+    "transaction_type": "expense",
+    "transaction_category": "Food",
+    "amount": "371.95",
+    "note": "Zomato"
+  },
+  {
+    "tid": "c9da6199-ec2d-4be6-bf39-2b0da22951f2",
+    "date": "2025-06-02",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "251",
+    "note": "Grocery"
+  },
+  {
+    "tid": "b76e222a-b1b1-43d0-aa13-c9b804a5a95e",
+    "date": "2025-06-02",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "30",
+    "note": "Swiggy One Membership"
+  },
+  {
+    "tid": "ae849c0a-f59f-4bbf-8fdb-ae3ab04001ab",
+    "date": "2025-06-03",
+    "transaction_type": "expense",
+    "transaction_category": "Gift",
+    "amount": "1504",
+    "note": "Baba's Birthday"
+  },
+  {
+    "tid": "4c5d6cbf-aba2-4ade-a1b9-3ecc7b3d4c97",
+    "date": "2025-06-03",
+    "transaction_type": "expense",
+    "transaction_category": "Household",
+    "amount": "72",
+    "note": ""
+  },
+  {
+    "tid": "c9aaedef-5cc1-47e9-9c39-d324ed2ef50c",
+    "date": "2025-06-04",
+    "transaction_type": "expense",
+    "transaction_category": "Transport",
+    "amount": "74.22",
+    "note": ""
+  },
+  {
+    "tid": "2465391d-307c-46a9-80ce-b985090342b5",
+    "date": "2025-06-06",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "95",
+    "note": "Cig"
+  },
+  {
+    "tid": "6f396bc0-eb74-452d-999a-16df6b6a7963",
+    "date": "2025-06-07",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "1387.50",
+    "note": "Personal Loan"
+  },
+  {
+    "tid": "15e8c128-ec4b-471b-bbe1-6a935dcbc858",
+    "date": "2025-06-07",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "272.10",
+    "note": "Recharge"
+  },
+  {
+    "tid": "8764545b-f17c-4762-bf06-97107829c457",
+    "date": "2025-06-07",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "3476",
+    "note": "Cycle Accessories"
+  },
+  {
+    "tid": "5d58f47f-ec96-45a9-804c-09818de29fea",
+    "date": "2025-06-07",
+    "transaction_type": "expense",
+    "transaction_category": "Food",
+    "amount": "300",
+    "note": ""
+  },
+  {
+    "tid": "ebc66ee7-8878-4a05-a119-e31de5356031",
+    "date": "2025-06-07",
+    "transaction_type": "expense",
+    "transaction_category": "Other",
+    "amount": "2000",
+    "note": "Car EMI"
+  }
+]

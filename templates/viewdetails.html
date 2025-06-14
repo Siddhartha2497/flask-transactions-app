@@ -1,0 +1,88 @@
+<h2>Welcome {{ session['user'] }}</h2>
+{% if txns %}
+<table border="1" cellpadding="8" bgcolor="aqua">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Transaction Type</th>
+        <th>Transaction Category</th>
+        <th>Amount</th>
+        <th>Notes</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for txn in txns %}
+    <tr>
+        <td>{{ txn.date }}</td>
+        <td>{{ txn.transaction_type }}</td>
+        <td>{{ txn.transaction_category }}</td>
+        <td>{{ txn.amount }}</td>
+        <td>{{ txn.note }}</td>
+        <td>
+            <a href="/edit/{{ txn.tid }}">Edit</a>
+        </td>
+        <td>
+            <form action="/delete/{{ txn.tid }}" method="post" style="display:inline;">
+                <button type="submit" onclick="return confirm('Delete this transaction?')">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No Transactions Found</p>
+{% endif %}
+<br><br>
+<div>
+    Please select if you want to view the total income/expense
+    <select name="totals" id="totals" onchange="ToggleTotals()">
+        <option value="">--Select the category--</option> {# Optional placeholder #}
+                <option value="daily">Daily</option>
+                <option value="monthly">Monthly</option>
+
+    </select>
+</div>
+<br>
+<div id="monthly_totals_section" style="display:none;">
+    <h3>Total Monthly Income</h3>
+    <ul style="color:blue;">
+        {% for month,total in monthly_totals_income.items() %}
+        <li>{{ month }}:{{ total }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Total Monthly Expense</h3>
+    <ul style="color:red;">
+        {% for month,total in monthly_totals_expense.items() %}
+        <li>{{ month }}   :   Rs. {{ total }}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div id="daily_totals_section" style="display:none;">
+    <h3>Total Daily Expense</h3>
+    <ul style="color:red;">
+        {% for day,total in daily_totals_expense.items() %}
+        <li>{{ day }}   :   Rs. {{ total }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+
+<!--<p>{{ message }}</p>-->
+<div>
+    <a href="/dashboard">Go To Dashboard</a>
+</div>
+<br>
+<div>
+    <a href="/logout">Logout</a>
+</div>
+
+
+<script>
+    function ToggleTotals(){
+        let view=document.getElementById("totals").value;
+        document.getElementById("monthly_totals_section").style.display= (view === "monthly") ? "block":"none";
+        document.getElementById("daily_totals_section").style.display= (view === "daily") ? "block":"none";
+    }
+</script>

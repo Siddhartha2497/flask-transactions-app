@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <style>
+<!--    #otp-section {-->
+<!--      display: {{ 'block' if show_otp else 'none' }};-->
+<!--    }-->
+  </style>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+  <form action="/login" id="upperDiv" method="post">
+    <div class="form-row">
+      <label>Username:</label>
+       <input name="username" required>
+    </div>
+    <div class="form-row">
+      <label>Password:</label>
+      <input name="password" type="password" required>
+    </div>
+    <div style="text-align: center;">
+      <button CssClass="buttons" type="submit" name="action" value="send-otp" onclick="ToggleDisplay()">Send OTP</button>
+    </div>
+    <br>
+
+<!--  Email:<input name="email" type="email" required>-->
+<!--  {% if not show_otp %}-->
+
+<!--  {% endif %}-->
+
+<!--  <div id="otp-section" style="display: {% if show_otp %}block{% else %}none{% endif %}">-->
+<!--    <input type="text" name="otp" placeholder="Enter the OTP" required><br><br>-->
+<!--    <button type="submit" name="action" value="verify-otp">Verify</button>-->
+<!--  </div>-->
+<!--    <div class="form-row" id="verifyotp_section" style="display:none;">-->
+<!--      <input type="text" name="otp" placeholder="Enter the OTP" required><br><br>-->
+<!--      <button type="submit" name="action" value="verify-otp">Verify</button>-->
+<!--    </div>-->
+  <div class="form-row">
+    <p>New user? <a href="/register">Register</a></p>
+    <p>Forgot Your Password? <a href="/resetpassword">Reset Password</a> </p>
+  </div>
+
+  </form>
+</body>
+</html>
+
+<script>
+  function ToggleDisplay(){
+    document.getElementById("verifyotp_section").style.display="block";
+  }
+</script>

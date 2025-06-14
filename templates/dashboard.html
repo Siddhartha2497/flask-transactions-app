@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+<h2>Welcome {{ session['user'] }}</h2>
+<form method="post" id="upperDiv">
+  <div class="form-row">
+      <label>Date:</label>
+      <input name="date" type="date" required>
+  </div>
+    <div class="form-row">
+        <label>Transaction Type:</label>
+        <select name="transaction_type" id="transaction_type" required>
+            <option value="">--Select the transaction type--</option> {# Optional placeholder #}
+            <option value="income">Income</option> {# Optional placeholder #}
+            <option value="expense">Expense</option> {# Optional placeholder #}
+        </select>
+    </div>
+    <div class="form-row">
+        <label> Transaction Category:</label>
+        <select name="transaction_category" id="transaction_category" required>
+            <option value="">--Select the transaction category--</option> {# Optional placeholder #}
+            {% for transaction_category in transaction_categories %}
+            <option value="{{ transaction_category }}">{{ transaction_category }}</option>
+            {% endfor %}
+        </select>
+    </div>
+   <div class="form-row">
+       <label>Amount:</label>
+       <input name="amount" required>
+   </div>
+  <div class="form-row">
+       <label>Notes:</label>
+      <input name="note">
+  </div>
+    <div style="text-align: center;">
+        <button CssClass="buttons" type="submit">Add Transaction</button>
+    </div>
+    <div class="form-row">
+        <a href="/viewdetails">View Details</a>
+        <br><br>
+        <a href="/logout">Logout</a>
+    </div>
+
+</form>
+
+</body>
+</html>

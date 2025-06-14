@@ -1,0 +1,20 @@
+<h2>Edit Transaction</h2>
+<form method="post">
+  Date: <input type="date" name="date" value="{{ txn.date }}"><br>
+  Amount: <input type="text" name="amount" value="{{ txn.amount }}"><br>
+  Note: <input type="text" name="note" value="{{ txn.note }}"><br>
+  Transaction Type:<select name="transaction_type" id="transaction_type">
+
+  {% for transaction in transactions %}
+    <option value="{{ transaction.value }}">{{ transaction.label }}</option>
+  {% endfor %}
+</select>
+  <br>
+  Transaction Category:<select name="transaction_category" id="transaction_category">
+  {% for transaction_category in transaction_categories %}
+    <option value="{{ transaction_category }}">{{ transaction_category }}</option>
+  {% endfor %}
+</select>
+  <button type="submit">Update</button>
+</form>
+<a href="/dashboard">Back</a>
