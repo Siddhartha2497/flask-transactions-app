@@ -26,13 +26,11 @@ app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')  # NOT your Gmail passw
 
 mail=Mail(app)
 
-#DATA_DIR = 'data'
-#DATA_DIR = os.getenv('DATA_DIR')
-#TRANSACTION_CATEGORY_FILE=os.path.join(DATA_DIR, 'transaction_category.json')
+
 TRANSACTION_CATEGORY_FILE=os.getenv('TRANSACTION_CATEGORY_FILE')
-#USERS_FILE = os.path.join(DATA_DIR, 'users.json')
+
 USERS_FILE = os.getenv('USERS_FILE')
-#TRANSACTIONS_DIR = os.path.join(DATA_DIR, 'transactions')
+
 TRANSACTIONS_DIR = os.getenv('TRANSACTIONS_DIR')
 
 os.makedirs(TRANSACTIONS_DIR, exist_ok=True)
